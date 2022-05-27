@@ -6,4 +6,5 @@ element.onclick = function(event){
     // alert(new Date());
 
     elements.innerHTML = new Date();
+    
 }
