@@ -67,7 +67,25 @@ ul > li{
 #btn{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 5px;
+}
+
+#click_section{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.click_c{
+    padding: 10px 30px;
+}
+
+.click_event{
+    display: flex;
+    justify-content: center;
+    background-color: darkseagreen;
 }
 
 
