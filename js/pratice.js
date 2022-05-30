@@ -19,10 +19,9 @@ function event_click(){
     const time = new Date();
     const second = time.getSeconds();
     clicks.innerHTML = second;
-
-    setInterval(event_click,1000); //1초마다 카운트
-
-    if(second > 30){
-        console.log(second);
+    if(second >= 30){
+        clicks.style.backgroundColor= 'blue'
     }
 }
+
+setInterval(event_click,1000); //1초마다 카운트
