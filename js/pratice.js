@@ -1,6 +1,6 @@
-let User_list = document.querySelector(".User_list");
+let userList = document.querySelector(".userList");
 
-let Users_list = [
+let users = [
     {
         id: '0',
         name: '페이커',
@@ -18,26 +18,34 @@ let Users_list = [
     },
     {
         id: '3',
-        name: '케리아',
+        name: '쇼메이커',
         age: '29'
     },
     {
         id: '4',
-        name: '오너',
+        name: '쵸비',
         age: '30'
-    },
-    {
-        id: '5',
-        name: '클템',
-        age: '31'
     }
 ]
 
-const result = [];
+// const result = [];
 
-Users_list.forEach(function (element) {
-    console.log(element)
+users.forEach(function (user) {
+    console.log(user)
+    let li = document.createElement('li');
+    li.innerHTML = user.name;
+
+    userList.appendChild(li);
+    let dd = document.querySelectorAll("li")
+    console.log(dd)
 });
+
+// click event 추가 해야됨
+
+
+
+
+
 
 
 
