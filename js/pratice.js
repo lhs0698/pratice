@@ -1,5 +1,6 @@
 let userList = document.querySelector(".userList");
 
+
 let users = [
     {
         id: '0',
@@ -28,19 +29,59 @@ let users = [
     }
 ]
 
-// const result = [];
-
-users.forEach(function (user) {
-    console.log(user)
+let result1 = users.forEach(function (user) {
+    console.log(user);
     let li = document.createElement('li');
-    li.innerHTML = user.name;
 
+    li.addEventListener('click',function(){
+        let div = document.getElementById("id");
+        // let div2 = div.innerHTML = user.id + user.name + user.age;
+        div.innerHTML = '<div> ID : ' + user.id + '</div>';
+    });
+    li.innerHTML = user.name;
     userList.appendChild(li);
-    let dd = document.querySelectorAll("li")
-    console.log(dd)
+    // let userInfo = document.querySelectorAll("li")
 });
 
-// click event 추가 해야됨
+let UserID = document.getElementById("useID");
+let UserName = document.getElementById("userName");
+let UserAge = document.getElementById("userAge");
+let creatBox = document.getElementById("create");
+
+creatBox.addEventListener('click', function () {
+    let newUser_ID = UserID.value;
+    let newUser_Name = UserName.value;
+    let newUser_Age = UserAge.value;
+    
+    let result = [];
+    // let obj = {};
+
+    const newBe = {
+        id : newUser_ID,
+        name : newUser_Name,
+        age : newUser_Age,
+    }
+    // console.log(newBe);
+
+    users.push(newBe);
+    // result.push(newUser_ID);
+    // result.push(newUser_Name);
+    // result.push(newUser_Age);
+
+    // console.log(result)
+
+    // users.push(result);
+    // console.log(users);
+})
+// 
+
+console.log(users);
+
+
+
+
+ 
+  
 
 
 
@@ -48,6 +89,55 @@ users.forEach(function (user) {
 
 
 
+
+
+
+
+// let newUser = [
+//     {
+//         id : '5',
+//         name : '오너',
+//         age : '31'
+//     }
+// ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let result2 = users.map(function(user){
+//     console.log(user)
+//     let li = document.createElement('li');
+
+//     li.addEventListener('click',function(){
+//         alert(user.age);    
+//     })
+
+//     li.innerHTML = user.name;
+//     userList.appendChild(li);
+//     // let userInfo = document.querySelectorAll("li")
+
+// })
+
+// console.log(result2)
 
 
 
